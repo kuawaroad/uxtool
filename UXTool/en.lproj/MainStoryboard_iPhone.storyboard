@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C57" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
         <scene sceneID="11">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -19,6 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
+        <!--Master View Controller - Master-->
         <scene sceneID="18">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
@@ -28,27 +31,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" detailTextLabel="HnM-xW-1rX" style="IBUITableViewCellStyleSubtitle" id="lJ0-d7-vTF">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
+                                            <rect key="frame" x="10" y="2" width="38" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HnM-xW-1rX">
+                                            <rect key="frame" x="10" y="24" width="47" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="21" kind="push" identifier="showDetail" id="jZb-fq-zAk"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -58,10 +65,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="36"/>
+                    <connections>
+                        <segue destination="5sz-0v-2nn" kind="push" identifier="AccelerometerSegue" id="PVm-Og-zMX"/>
+                        <segue destination="21" kind="push" identifier="PinchSegue" id="mVD-3a-wtx"/>
+                        <segue destination="iPW-08-geV" kind="push" identifier="RotationSegue" id="ld9-79-9dc"/>
+                        <segue destination="ikn-hJ-H4a" kind="push" identifier="TapSegue" id="ns9-dI-KXx"/>
+                        <segue destination="2aU-dT-G5V" kind="push" identifier="SwipeSegue" id="fxn-9k-eXd"/>
+                        <segue destination="ieU-9J-hc7" kind="push" identifier="PanSegue" id="LQ1-IQ-I3u"/>
+                        <segue destination="dRN-6F-HQB" kind="push" identifier="LongPressSegue" id="81h-At-cNS"/>
+                        <segue destination="EgY-OL-Bce" kind="push" identifier="MultipleSegue" id="KwB-0s-KRV"/>
+                        <segue destination="v7K-UV-PU5" kind="push" identifier="CustomSegue" id="G9G-6D-XN1"/>
+                    </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="459" y="64"/>
+            <point key="canvasLocation" x="513" y="64"/>
         </scene>
+        <!--Detail View Controller - Detail-->
         <scene sceneID="24">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -81,15 +100,146 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <navigationItem key="navigationItem" title="Pinch" id="26"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="27" id="28"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="1035" y="-562"/>
+        </scene>
+        <!--View Controller - Pan-->
+        <scene sceneID="JBl-EN-MUX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYL-td-ftf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ieU-9J-hc7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k4F-Wj-L6A">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pan" id="31R-lj-u2s"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1437" y="-807"/>
+        </scene>
+        <!--View Controller - Rotation-->
+        <scene sceneID="qIS-Mh-lSL">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ff5-wT-jwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="iPW-08-geV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2hz-UO-OsJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rotation" id="g1r-hn-MYR"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1034" y="-1"/>
+        </scene>
+        <!--View Controller - Long Press-->
+        <scene sceneID="yva-b1-neN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtj-Er-D7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="dRN-6F-HQB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lxM-JP-N44">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Long Press" id="oCg-Za-T3x"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1437" y="-208"/>
+        </scene>
+        <!--View Controller - Tap-->
+        <scene sceneID="8Lv-t8-NfU">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgK-qt-S9e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ikn-hJ-H4a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k8e-uG-Iw5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tap" id="DxN-wj-hJo"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="636" y="719"/>
+        </scene>
+        <!--View Controller - Swipe-->
+        <scene sceneID="Dro-YT-U5Y">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lBc-On-SnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="2aU-dT-G5V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8RW-vz-aCv">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swipe" id="RAB-9F-ZoJ"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1035" y="618"/>
+        </scene>
+        <!--View Controller - Multiple-->
+        <scene sceneID="Li6-dh-7EW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SaM-hA-pHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="EgY-OL-Bce" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jXl-Ft-4zN">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Multiple" id="joY-0K-TZH"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1437" y="394"/>
+        </scene>
+        <!--View Controller - Custom-->
+        <scene sceneID="INB-51-atC">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFu-cb-gID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="v7K-UV-PU5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rao-XX-nCE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom" id="2fe-W7-phj"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1437" y="980"/>
+        </scene>
+        <!--View Controller - Accelerometer-->
+        <scene sceneID="hcO-q2-LOG">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXK-eE-vB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="5sz-0v-2nn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rGG-W3-HXH">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Accelerometer" id="snW-Gv-4vi"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="636" y="-666"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

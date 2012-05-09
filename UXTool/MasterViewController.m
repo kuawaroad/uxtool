@@ -10,9 +10,11 @@
 
 #import "DetailViewController.h"
 
-@interface MasterViewController () {
+@interface MasterViewController () 
+{
     NSMutableArray *_objects;
 }
+-(NSString *)pathForFile:(NSString*)fileName ofType:(NSString *)fileType;
 @end
 
 @implementation MasterViewController
@@ -37,6 +39,11 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    NSDictionary *plistDict = [NSDictionary dictionaryWithContentsOfFile:[self pathForFile:@"Data" ofType:@"plist"]];
+    _objects = [plistDict objectForKey:@"Root"];
+        //objects should contain dictionaries now..
+    NSLog(@"OBJECTS :: %@",_objects);
 }
 
 - (void)viewDidUnload
@@ -76,12 +83,18 @@
     return _objects.count;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60.0;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
-    NSDate *object = [_objects objectAtIndex:indexPath.row];
-    cell.textLabel.text = [object description];
+    NSDictionary *cellDict = [_objects objectAtIndex:indexPath.row];
+    cell.textLabel.text = [cellDict objectForKey:@"Title"];
+    cell.detailTextLabel.text = [cellDict objectForKey:@"Subtitle"];
     return cell;
 }
 
@@ -122,16 +135,45 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         NSDate *object = [_objects objectAtIndex:indexPath.row];
         self.detailViewController.detailItem = object;
+    } else {
+            // iPhone...
+        if (indexPath.row == 0) {
+            [self performSegueWithIdentifier:@"AccelerometerSegue" sender:[_objects objectAtIndex:indexPath.row]];
+        } else if (indexPath.row == 1){
+            [self performSegueWithIdentifier:@"TapSegue" sender:[_objects objectAtIndex:indexPath.row]];
+        } else if (indexPath.row == 2){
+            [self performSegueWithIdentifier:@"PinchSegue" sender:[_objects objectAtIndex:indexPath.row]];
+        } else if (indexPath.row == 3){
+            [self performSegueWithIdentifier:@"RotationSegue" sender:[_objects objectAtIndex:indexPath.row]];
+        } else if (indexPath.row == 4){
+            [self performSegueWithIdentifier:@"SwipeSegue" sender:[_objects objectAtIndex:indexPath.row]];
+        } else if (indexPath.row == 5){
+            [self performSegueWithIdentifier:@"PanSegue" sender:[_objects objectAtIndex:indexPath.row]];
+        } else if (indexPath.row == 6){
+            [self performSegueWithIdentifier:@"LongPressSegue" sender:[_objects objectAtIndex:indexPath.row]];
+        } else if (indexPath.row == 7){
+            [self performSegueWithIdentifier:@"PanSegue" sender:[_objects objectAtIndex:indexPath.row]];
+        } else if (indexPath.row == 8){
+            [self performSegueWithIdentifier:@"MultipleSegue" sender:[_objects objectAtIndex:indexPath.row]];
+        } else if (indexPath.row == 9){
+            [self performSegueWithIdentifier:@"CustomSegue" sender:[_objects objectAtIndex:indexPath.row]];
+        }
     }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"PinchSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = [_objects objectAtIndex:indexPath.row];
+        NSDictionary *object = [_objects objectAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
+}
+
+-(NSString *)pathForFile:(NSString *)plistFile ofType:(NSString *)fileType
+{
+    NSString *pathString = [[NSBundle mainBundle] pathForResource:plistFile ofType:fileType];
+    return pathString;
 }
 
 @end

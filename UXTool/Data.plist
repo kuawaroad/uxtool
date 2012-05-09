@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Root</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>Accelerometer</string>
+			<key>Subtitle</key>
+			<string>UIAccelerometer</string>
+			<key>Segue</key>
+			<string>AccelerometerSegue</string>
+			<key>ID</key>
+			<string></string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Tap Gesture</string>
+			<key>Subtitle</key>
+			<string>UITapGestureRecognizer</string>
+			<key>Segue</key>
+			<string>TapSegue</string>
+			<key>ID</key>
+			<string></string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Pinch Gesture</string>
+			<key>Subtitle</key>
+			<string>UIPinchGestureRecognizer</string>
+			<key>Segue</key>
+			<string>PinchSegue</string>
+			<key>ID</key>
+			<string></string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Rotation Gesture</string>
+			<key>Subtitle</key>
+			<string>UIRotationGestureRecognizer</string>
+			<key>Segue</key>
+			<string>RotationSegue</string>
+			<key>ID</key>
+			<string></string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Swipe Gesture</string>
+			<key>Subtitle</key>
+			<string>UISwipeGestureRecognizer</string>
+			<key>Segue</key>
+			<string>SwipeSegue</string>
+			<key>ID</key>
+			<string></string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Pan Gesture</string>
+			<key>Subtitle</key>
+			<string>UIPanGestureRecognizer</string>
+			<key>Segue</key>
+			<string>PanSegue</string>
+			<key>ID</key>
+			<string></string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Long Press Gesture</string>
+			<key>Subtitle</key>
+			<string>UILongPressGestureRecognizer</string>
+			<key>Segue</key>
+			<string>LongPressSegue</string>
+			<key>ID</key>
+			<string></string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Multiple Recognizers</string>
+			<key>Subtitle</key>
+			<string>One view, multiple gestures</string>
+			<key>Segue</key>
+			<string>MultipleSegue</string>
+			<key>ID</key>
+			<string></string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Custom Gesture</string>
+			<key>Subtitle</key>
+			<string>MyCustomTouchRecognizer</string>
+			<key>Segue</key>
+			<string>CustomSegue</string>
+			<key>ID</key>
+			<string></string>
+			<key>Description</key>
+			<string></string>
+		</dict>
+	</array>
+</dict>
+</plist>
