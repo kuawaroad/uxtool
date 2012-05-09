@@ -18,6 +18,8 @@
 		B4560DAB155ADA2F004E9F49 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4560DAA155ADA2F004E9F49 /* MasterViewController.m */; };
 		B4560DAE155ADA2F004E9F49 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4560DAD155ADA2F004E9F49 /* DetailViewController.m */; };
 		B4560DB5155ADB12004E9F49 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4560DB4155ADB12004E9F49 /* Data.plist */; };
+		B4560DB9155AEAC9004E9F49 /* AccelerometerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4560DB8155AEAC9004E9F49 /* AccelerometerVC.m */; };
+		B4560DBB155AF532004E9F49 /* device_axes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4560DBA155AF532004E9F49 /* device_axes.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,9 @@
 		B4560DAC155ADA2F004E9F49 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B4560DAD155ADA2F004E9F49 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B4560DB4155ADB12004E9F49 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		B4560DB7155AEAC9004E9F49 /* AccelerometerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerVC.h; sourceTree = "<group>"; };
+		B4560DB8155AEAC9004E9F49 /* AccelerometerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerVC.m; sourceTree = "<group>"; };
+		B4560DBA155AF532004E9F49 /* device_axes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = device_axes.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +97,7 @@
 				B4560DAA155ADA2F004E9F49 /* MasterViewController.m */,
 				B4560DAC155ADA2F004E9F49 /* DetailViewController.h */,
 				B4560DAD155ADA2F004E9F49 /* DetailViewController.m */,
+				B4560DB6155AE816004E9F49 /* Detail View Controllers */,
 				B4560DB4155ADB12004E9F49 /* Data.plist */,
 				B4560D98155ADA2F004E9F49 /* Supporting Files */,
 			);
@@ -105,8 +111,18 @@
 				B4560D9A155ADA2F004E9F49 /* InfoPlist.strings */,
 				B4560D9D155ADA2F004E9F49 /* main.m */,
 				B4560D9F155ADA2F004E9F49 /* UXTool-Prefix.pch */,
+				B4560DBA155AF532004E9F49 /* device_axes.jpg */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4560DB6155AE816004E9F49 /* Detail View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4560DB7155AEAC9004E9F49 /* AccelerometerVC.h */,
+				B4560DB8155AEAC9004E9F49 /* AccelerometerVC.m */,
+			);
+			name = "Detail View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +179,7 @@
 				B4560DA5155ADA2F004E9F49 /* MainStoryboard_iPhone.storyboard in Resources */,
 				B4560DA8155ADA2F004E9F49 /* MainStoryboard_iPad.storyboard in Resources */,
 				B4560DB5155ADB12004E9F49 /* Data.plist in Resources */,
+				B4560DBB155AF532004E9F49 /* device_axes.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +194,7 @@
 				B4560DA2155ADA2F004E9F49 /* AppDelegate.m in Sources */,
 				B4560DAB155ADA2F004E9F49 /* MasterViewController.m in Sources */,
 				B4560DAE155ADA2F004E9F49 /* DetailViewController.m in Sources */,
+				B4560DB9155AEAC9004E9F49 /* AccelerometerVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

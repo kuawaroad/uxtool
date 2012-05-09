@@ -213,23 +213,75 @@
             </objects>
             <point key="canvasLocation" x="1437" y="980"/>
         </scene>
-        <!--View Controller - Accelerometer-->
+        <!--AccelerometerVC - Accelerometer-->
         <scene sceneID="hcO-q2-LOG">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXK-eE-vB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="5sz-0v-2nn" sceneMemberID="viewController">
+                <viewController id="5sz-0v-2nn" customClass="AccelerometerVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rGG-W3-HXH">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="device_axes.jpg" id="Vpr-fg-iVY">
+                                <rect key="frame" x="59" y="71" width="203" height="264"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="O2H-KI-Hmz">
+                                <rect key="frame" x="20" y="12" width="240" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Obg-3r-ZmS">
+                                <rect key="frame" x="272" y="6" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="qKO-Ho-j3d">
+                                <rect key="frame" x="25" y="401" width="240" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="LfG-wp-leq">
+                                <rect key="frame" x="277" y="395" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Y" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="rbY-Sa-4BA">
+                                <rect key="frame" x="15" y="41" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Accelerometer" id="snW-Gv-4vi"/>
+                    <connections>
+                        <outlet property="Xprogress" destination="O2H-KI-Hmz" id="RSI-M7-Xcd"/>
+                        <outlet property="Zprogress" destination="qKO-Ho-j3d" id="Kyx-oE-dwp"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="636" y="-666"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="device_axes.jpg" width="367" height="389"/>
+    </resources>
     <classes>
+        <class className="AccelerometerVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccelerometerVC.h"/>
+            <relationships>
+                <relationship kind="outlet" name="Xprogress" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="Zprogress" candidateClass="UIProgressView"/>
+            </relationships>
+        </class>
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
