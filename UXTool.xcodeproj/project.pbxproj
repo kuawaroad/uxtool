@@ -22,6 +22,16 @@
 		B4560DBB155AF532004E9F49 /* device_axes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4560DBA155AF532004E9F49 /* device_axes.jpg */; };
 		B4D54A2B155C64FE00F99FBE /* monkey_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A2A155C64FE00F99FBE /* monkey_1.png */; };
 		B4D54A2E155C666B00F99FBE /* PanGestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D54A2D155C666B00F99FBE /* PanGestureVC.m */; };
+		B4D54A32155C6D4500F99FBE /* monkey_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A2F155C6D4500F99FBE /* monkey_2.png */; };
+		B4D54A34155C6D4500F99FBE /* monkey_dead.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A31155C6D4500F99FBE /* monkey_dead.png */; };
+		B4D54A3C155C6D5100F99FBE /* backpack.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A35155C6D5000F99FBE /* backpack.png */; };
+		B4D54A3D155C6D5100F99FBE /* banana.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A36155C6D5000F99FBE /* banana.png */; };
+		B4D54A3E155C6D5100F99FBE /* bananabunch.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A37155C6D5100F99FBE /* bananabunch.png */; };
+		B4D54A3F155C6D5100F99FBE /* canteen.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A38155C6D5100F99FBE /* canteen.png */; };
+		B4D54A40155C6D5100F99FBE /* hat.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A39155C6D5100F99FBE /* hat.png */; };
+		B4D54A41155C6D5100F99FBE /* pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A3A155C6D5100F99FBE /* pineapple.png */; };
+		B4D54A42155C6D5100F99FBE /* statue.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A3B155C6D5100F99FBE /* statue.png */; };
+		B4D54A45155C6D9D00F99FBE /* monkey_3.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A44155C6D9D00F99FBE /* monkey_3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +58,16 @@
 		B4D54A2A155C64FE00F99FBE /* monkey_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey_1.png; sourceTree = "<group>"; };
 		B4D54A2C155C666B00F99FBE /* PanGestureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanGestureVC.h; sourceTree = "<group>"; };
 		B4D54A2D155C666B00F99FBE /* PanGestureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanGestureVC.m; sourceTree = "<group>"; };
+		B4D54A2F155C6D4500F99FBE /* monkey_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey_2.png; sourceTree = "<group>"; };
+		B4D54A31155C6D4500F99FBE /* monkey_dead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey_dead.png; sourceTree = "<group>"; };
+		B4D54A35155C6D5000F99FBE /* backpack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backpack.png; sourceTree = "<group>"; };
+		B4D54A36155C6D5000F99FBE /* banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banana.png; sourceTree = "<group>"; };
+		B4D54A37155C6D5100F99FBE /* bananabunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bananabunch.png; sourceTree = "<group>"; };
+		B4D54A38155C6D5100F99FBE /* canteen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canteen.png; sourceTree = "<group>"; };
+		B4D54A39155C6D5100F99FBE /* hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hat.png; sourceTree = "<group>"; };
+		B4D54A3A155C6D5100F99FBE /* pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pineapple.png; sourceTree = "<group>"; };
+		B4D54A3B155C6D5100F99FBE /* statue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statue.png; sourceTree = "<group>"; };
+		B4D54A44155C6D9D00F99FBE /* monkey_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey_3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +114,7 @@
 		B4560D97155ADA2F004E9F49 /* UXTool */ = {
 			isa = PBXGroup;
 			children = (
-				B4D54A2A155C64FE00F99FBE /* monkey_1.png */,
+				B4D54A43155C6D5500F99FBE /* Images */,
 				B4560DA0155ADA2F004E9F49 /* AppDelegate.h */,
 				B4560DA1155ADA2F004E9F49 /* AppDelegate.m */,
 				B4560DA3155ADA2F004E9F49 /* MainStoryboard_iPhone.storyboard */,
@@ -131,6 +151,24 @@
 				B4D54A2D155C666B00F99FBE /* PanGestureVC.m */,
 			);
 			name = "Detail View Controllers";
+			sourceTree = "<group>";
+		};
+		B4D54A43155C6D5500F99FBE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B4D54A35155C6D5000F99FBE /* backpack.png */,
+				B4D54A36155C6D5000F99FBE /* banana.png */,
+				B4D54A37155C6D5100F99FBE /* bananabunch.png */,
+				B4D54A38155C6D5100F99FBE /* canteen.png */,
+				B4D54A39155C6D5100F99FBE /* hat.png */,
+				B4D54A3A155C6D5100F99FBE /* pineapple.png */,
+				B4D54A3B155C6D5100F99FBE /* statue.png */,
+				B4D54A2A155C64FE00F99FBE /* monkey_1.png */,
+				B4D54A2F155C6D4500F99FBE /* monkey_2.png */,
+				B4D54A44155C6D9D00F99FBE /* monkey_3.png */,
+				B4D54A31155C6D4500F99FBE /* monkey_dead.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +227,16 @@
 				B4560DB5155ADB12004E9F49 /* Data.plist in Resources */,
 				B4560DBB155AF532004E9F49 /* device_axes.jpg in Resources */,
 				B4D54A2B155C64FE00F99FBE /* monkey_1.png in Resources */,
+				B4D54A32155C6D4500F99FBE /* monkey_2.png in Resources */,
+				B4D54A34155C6D4500F99FBE /* monkey_dead.png in Resources */,
+				B4D54A3C155C6D5100F99FBE /* backpack.png in Resources */,
+				B4D54A3D155C6D5100F99FBE /* banana.png in Resources */,
+				B4D54A3E155C6D5100F99FBE /* bananabunch.png in Resources */,
+				B4D54A3F155C6D5100F99FBE /* canteen.png in Resources */,
+				B4D54A40155C6D5100F99FBE /* hat.png in Resources */,
+				B4D54A41155C6D5100F99FBE /* pineapple.png in Resources */,
+				B4D54A42155C6D5100F99FBE /* statue.png in Resources */,
+				B4D54A45155C6D9D00F99FBE /* monkey_3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
