@@ -59,9 +59,10 @@
     self.yLabel.text = [NSString stringWithFormat:@"Y: %.2f",acceleration.y];
     self.zLabel.text = [NSString stringWithFormat:@"Z: %.2f",acceleration.z];
     
-    self.Xprogress.progress = ABS(acceleration.x);
-    self.Yprogress.progress = ABS(acceleration.y);
-    self.Zprogress.progress = ABS(acceleration.z);
+        // Progress 50% = 0 acceleration
+    self.Xprogress.progress = ABS(acceleration.x + .5);
+    self.Yprogress.progress = ABS(acceleration.y + .5);
+    self.Zprogress.progress = ABS(acceleration.z + .5);
 }
 
 
