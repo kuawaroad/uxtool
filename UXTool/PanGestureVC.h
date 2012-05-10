@@ -10,6 +10,9 @@
 
 @interface PanGestureVC : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *velocityLabel;
+
+
 -(IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
 
 @end
