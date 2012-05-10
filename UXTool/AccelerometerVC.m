@@ -9,14 +9,18 @@
 #import "AccelerometerVC.h"
 
 @interface AccelerometerVC ()
-
 @end
 
 @implementation AccelerometerVC
+
+@synthesize xLabel;
+@synthesize yLabel;
+@synthesize zLabel;
 @synthesize Xprogress;
 @synthesize Yprogress;
 @synthesize Zprogress;
-    //@synthesize testView;
+@synthesize myAccel;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,31 +36,46 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    //self.testView = [[UIProgressView alloc] initWithFrame:CGRectMake(100, 100, 200, 15)];//initWithProgressViewStyle:UIProgressViewStyleDefault];
-    //self.testView.transform = CGAffineTransformMakeRotation(-M_PI * 0.5);
-    //self.testView.progress = 0.685;
-    //[self.view addSubview:self.testView];
     
+        // add the vertical progress indicator
     self.Yprogress = [[UIProgressView alloc] initWithFrame:CGRectMake(-127,215, 300, 9)];
-        //self.Yprogress.backgroundColor = [UIColor blackColor];
+    self.Yprogress.progressTintColor = [UIColor redColor];
     CGRect bounds = self.Yprogress.bounds;
     CGRect frame = self.Yprogress.frame;
-    
     NSLog(@"BOUNDS (%f , %f) W%f x H%f",bounds.origin.x,bounds.origin.y,bounds.size.width, bounds.size.height);
     NSLog(@"FRAME (%f , %f) W%f x H%f\n",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height);
     self.Yprogress.transform = CGAffineTransformRotate(self.Yprogress.transform,(-M_PI * 0.5));
     NSLog(@"BOUNDS (%f , %f) W%f x H%f",bounds.origin.x,bounds.origin.y,bounds.size.width, bounds.size.height);
     NSLog(@"FRAME (%f , %f) W%f x H%f",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height);
-    
-        //[self.Yprogress setNeedsDisplay];
     [self.view addSubview:self.Yprogress];
+    
+        // set up accelerometer
+    self.myAccel = [UIAccelerometer sharedAccelerometer];
+    self.myAccel.updateInterval = 0.35; // you can change this property while delegate is non-nil;
+    self.myAccel.delegate = self;
 }
+
+-(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
+{
+    self.xLabel.text = [NSString stringWithFormat:@"X: %.2f",acceleration.x];
+    self.yLabel.text = [NSString stringWithFormat:@"Y: %.2f",acceleration.y];
+    self.zLabel.text = [NSString stringWithFormat:@"Z: %.2f",acceleration.z];
+    
+    self.Xprogress.progress = ABS(acceleration.x);
+    self.Yprogress.progress = ABS(acceleration.y);
+    self.Zprogress.progress = ABS(acceleration.z);
+}
+
 
 - (void)viewDidUnload
 {
     [self setXprogress:nil];
     [self setYprogress:nil];
     [self setZprogress:nil];
+    [self setXLabel:nil];
+    [self setYLabel:nil];
+    [self setZLabel:nil];
+    self.myAccel = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

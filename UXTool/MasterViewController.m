@@ -38,7 +38,7 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+        self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     NSDictionary *plistDict = [NSDictionary dictionaryWithContentsOfFile:[self pathForFile:@"Data" ofType:@"plist"]];
     _objects = [plistDict objectForKey:@"Root"];
@@ -50,6 +50,13 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+    _detailViewController = nil;
+}
+
+-(void)dealloc
+{
+    _objects = nil;
+    _detailViewController = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -278,10 +278,14 @@
 		B4560DB2155ADA2F004E9F49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: George Uno (QQ4LN5U75B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: George Uno (QQ4LN5U75B)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UXTool/UXTool-Prefix.pch";
 				INFOPLIST_FILE = "UXTool/UXTool-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5E4A76D5-BD46-40CD-86B8-7A75223DD5C8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5E4A76D5-BD46-40CD-86B8-7A75223DD5C8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -289,10 +293,14 @@
 		B4560DB3155ADA2F004E9F49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: George Uno (QQ4LN5U75B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: George Uno (QQ4LN5U75B)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UXTool/UXTool-Prefix.pch";
 				INFOPLIST_FILE = "UXTool/UXTool-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5E4A76D5-BD46-40CD-86B8-7A75223DD5C8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5E4A76D5-BD46-40CD-86B8-7A75223DD5C8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -316,6 +324,7 @@
 				B4560DB3155ADA2F004E9F49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
