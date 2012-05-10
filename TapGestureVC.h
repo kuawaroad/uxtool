@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface TapGestureVC : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *touchesAndTaps;
+@property (strong, nonatomic) IBOutlet UILabel *locationLabel;
 
+- (IBAction)handleTap:(UITapGestureRecognizer *)sender;
 @end

@@ -13,6 +13,8 @@
 @end
 
 @implementation TapGestureVC
+@synthesize touchesAndTaps;
+@synthesize locationLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +33,8 @@
 
 - (void)viewDidUnload
 {
+    [self setTouchesAndTaps:nil];
+    [self setLocationLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -40,4 +44,9 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)handleTap:(UITapGestureRecognizer *)sender 
+{
+    CGPoint touchPoint = [sender locationInView:self.view];
+    self.touchesAndTaps.text = [NSString stringWithFormat:@"Touches: %i  Location:(%.f , %.f)",sender.numberOfTouches,touchPoint.x,touchPoint.y];
+}
 @end

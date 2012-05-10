@@ -275,11 +275,22 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZLe-XZ-q1k" appends="YES" id="Eqx-df-HCO"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tap" id="DxN-wj-hJo"/>
+                    <connections>
+                        <outlet property="locationLabel" destination="b6w-YT-LS2" id="l3t-Zc-dxu"/>
+                        <outlet property="touchesAndTaps" destination="9Ld-Ee-RB3" id="sY6-gh-0ur"/>
+                    </connections>
                 </viewController>
-                <tapGestureRecognizer id="XLu-6z-irZ"/>
-                <tapGestureRecognizer id="ZLe-XZ-q1k"/>
+                <tapGestureRecognizer id="ZLe-XZ-q1k">
+                    <connections>
+                        <action selector="handleTap:" destination="ikn-hJ-H4a" id="RCf-zF-3dn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="636" y="719"/>
         </scene>
@@ -522,6 +533,11 @@
         </class>
         <class className="TapGestureVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TapGestureVC.h"/>
+            <relationships>
+                <relationship kind="action" name="handleTap:" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="touchesAndTaps" candidateClass="UILabel"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
