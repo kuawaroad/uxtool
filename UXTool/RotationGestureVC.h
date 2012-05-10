@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface RotationGestureVC : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *angleLabel;
+- (IBAction)handleRotation:(UIRotationGestureRecognizer *)recognizer;
 
 @end
