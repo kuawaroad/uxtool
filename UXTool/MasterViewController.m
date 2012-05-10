@@ -23,6 +23,7 @@
 
 - (void)awakeFromNib
 {
+    NSLog(@"awakeFromNib");
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.clearsSelectionOnViewWillAppear = NO;
         self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
@@ -33,6 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"viewDidLoad");
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
@@ -48,6 +50,7 @@
 
 - (void)viewDidUnload
 {
+    NSLog(@"viewDidUnload");
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     _detailViewController = nil;
@@ -55,6 +58,7 @@
 
 -(void)dealloc
 {
+    NSLog(@"dealloc");
     _objects = nil;
     _detailViewController = nil;
 }
@@ -82,11 +86,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    NSLog(@"numberOfSectionsInTableView");
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"numberOfRowsInSection");
     return _objects.count;
 }
 
@@ -97,6 +103,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"cellForRowAtIndexPath");
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
     NSDictionary *cellDict = [_objects objectAtIndex:indexPath.row];

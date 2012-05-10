@@ -45,8 +45,6 @@
     NSLog(@"BOUNDS (%f , %f) W%f x H%f",bounds.origin.x,bounds.origin.y,bounds.size.width, bounds.size.height);
     NSLog(@"FRAME (%f , %f) W%f x H%f\n",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height);
     self.Yprogress.transform = CGAffineTransformRotate(self.Yprogress.transform,(-M_PI * 0.5));
-    NSLog(@"BOUNDS (%f , %f) W%f x H%f",bounds.origin.x,bounds.origin.y,bounds.size.width, bounds.size.height);
-    NSLog(@"FRAME (%f , %f) W%f x H%f",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height);
     [self.view addSubview:self.Yprogress];
     
         // set up accelerometer
@@ -69,15 +67,34 @@
 
 - (void)viewDidUnload
 {
+    NSLog(@"Accel view unloading");
+    [self.myAccel setDelegate:nil];
+    
     [self setXprogress:nil];
     [self setYprogress:nil];
     [self setZprogress:nil];
     [self setXLabel:nil];
     [self setYLabel:nil];
     [self setZLabel:nil];
-    self.myAccel = nil;
+    
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+    // Adding Dealloc fixed the mystery back-navigating crash.  sweet.
+-(void)dealloc
+{
+    NSLog(@"Accel Dealloc");
+    [self.myAccel setDelegate:nil];
+    
+    self.Xprogress = nil;
+    self.Yprogress = nil;
+    self.Zprogress = nil;
+    self.xLabel = nil;
+    self.yLabel = nil;
+    self.zLabel = nil;
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

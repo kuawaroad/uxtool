@@ -15,9 +15,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *yLabel;
 @property (strong, nonatomic) IBOutlet UILabel *zLabel;
 
-@property (weak, nonatomic) IBOutlet UIProgressView *Xprogress;
+@property (strong, nonatomic) IBOutlet UIProgressView *Xprogress;
 @property (strong, nonatomic) UIProgressView *Yprogress;
 @property (strong, nonatomic) IBOutlet UIProgressView *Zprogress;
+
 @property (nonatomic,strong) UIAccelerometer *myAccel;
 
 @end
