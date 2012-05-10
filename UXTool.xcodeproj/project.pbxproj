@@ -20,6 +20,8 @@
 		B4560DB5155ADB12004E9F49 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4560DB4155ADB12004E9F49 /* Data.plist */; };
 		B4560DB9155AEAC9004E9F49 /* AccelerometerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4560DB8155AEAC9004E9F49 /* AccelerometerVC.m */; };
 		B4560DBB155AF532004E9F49 /* device_axes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4560DBA155AF532004E9F49 /* device_axes.jpg */; };
+		B4D54A2B155C64FE00F99FBE /* monkey_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A2A155C64FE00F99FBE /* monkey_1.png */; };
+		B4D54A2E155C666B00F99FBE /* PanGestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D54A2D155C666B00F99FBE /* PanGestureVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		B4560DB7155AEAC9004E9F49 /* AccelerometerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerVC.h; sourceTree = "<group>"; };
 		B4560DB8155AEAC9004E9F49 /* AccelerometerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerVC.m; sourceTree = "<group>"; };
 		B4560DBA155AF532004E9F49 /* device_axes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = device_axes.jpg; sourceTree = "<group>"; };
+		B4D54A2A155C64FE00F99FBE /* monkey_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey_1.png; sourceTree = "<group>"; };
+		B4D54A2C155C666B00F99FBE /* PanGestureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanGestureVC.h; sourceTree = "<group>"; };
+		B4D54A2D155C666B00F99FBE /* PanGestureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanGestureVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,7 @@
 		B4560D97155ADA2F004E9F49 /* UXTool */ = {
 			isa = PBXGroup;
 			children = (
+				B4D54A2A155C64FE00F99FBE /* monkey_1.png */,
 				B4560DA0155ADA2F004E9F49 /* AppDelegate.h */,
 				B4560DA1155ADA2F004E9F49 /* AppDelegate.m */,
 				B4560DA3155ADA2F004E9F49 /* MainStoryboard_iPhone.storyboard */,
@@ -121,6 +127,8 @@
 			children = (
 				B4560DB7155AEAC9004E9F49 /* AccelerometerVC.h */,
 				B4560DB8155AEAC9004E9F49 /* AccelerometerVC.m */,
+				B4D54A2C155C666B00F99FBE /* PanGestureVC.h */,
+				B4D54A2D155C666B00F99FBE /* PanGestureVC.m */,
 			);
 			name = "Detail View Controllers";
 			sourceTree = "<group>";
@@ -180,6 +188,7 @@
 				B4560DA8155ADA2F004E9F49 /* MainStoryboard_iPad.storyboard in Resources */,
 				B4560DB5155ADB12004E9F49 /* Data.plist in Resources */,
 				B4560DBB155AF532004E9F49 /* device_axes.jpg in Resources */,
+				B4D54A2B155C64FE00F99FBE /* monkey_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +204,7 @@
 				B4560DAB155ADA2F004E9F49 /* MasterViewController.m in Sources */,
 				B4560DAE155ADA2F004E9F49 /* DetailViewController.m in Sources */,
 				B4560DB9155AEAC9004E9F49 /* AccelerometerVC.m in Sources */,
+				B4D54A2E155C666B00F99FBE /* PanGestureVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
