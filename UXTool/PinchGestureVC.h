@@ -10,4 +10,9 @@
 
 @interface PinchGestureVC : UIViewController <UISplitViewControllerDelegate>
 
+@property (strong, nonatomic) IBOutlet UILabel *scaleLabel;
+
+
+-(IBAction)handlePinch:(UIPinchGestureRecognizer *)recognizer;
+
 @end

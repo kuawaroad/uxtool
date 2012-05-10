@@ -10,9 +10,11 @@
 
 @interface PinchGestureVC ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+-(void)updateUI;
 @end
 
 @implementation PinchGestureVC
+@synthesize scaleLabel = _scaleLabel;
 
 @synthesize masterPopoverController = _masterPopoverController;
 
@@ -33,7 +35,9 @@
 
 - (void)viewDidUnload
 {
+    [self setScaleLabel:nil];
     [super viewDidUnload];
+    
     // Release any retained subviews of the main view.
 }
 
@@ -42,6 +46,18 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(void)handlePinch:(UIPinchGestureRecognizer *)recognizer
+{
+    recognizer.view.transform = CGAffineTransformScale(recognizer.view.transform, recognizer.scale, recognizer.scale);
+    self.scaleLabel.text = [NSString stringWithFormat:@"Scale: %.f percent",recognizer.scale * 100];
+    
+    recognizer.scale = 1; // reset to default or compounds
+}
+
+-(void)updateUI
+{
+    
+}
 
 #pragma mark - Split view
 

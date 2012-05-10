@@ -89,8 +89,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" image="hat.png" id="b9g-E3-0nb">
-                                <rect key="frame" x="38" y="133" width="244" height="150"/>
+                            <imageView contentMode="scaleToFill" image="statue.png" id="b9g-E3-0nb">
+                                <rect key="frame" x="55" y="60" width="210" height="295"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -109,8 +109,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pinch" id="26"/>
+                    <connections>
+                        <outlet property="scaleLabel" destination="cPy-dP-41Y" id="pK8-7a-Nrd"/>
+                    </connections>
                 </viewController>
-                <pinchGestureRecognizer id="rk6-pT-wL2"/>
+                <pinchGestureRecognizer id="rk6-pT-wL2">
+                    <connections>
+                        <action selector="handlePinch:" destination="21" id="UmJ-HK-YPW"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1035" y="-562"/>
         </scene>
@@ -460,7 +467,6 @@
         <image name="bananabunch.png" width="175" height="130"/>
         <image name="canteen.png" width="119" height="156"/>
         <image name="device_axes.jpg" width="367" height="389"/>
-        <image name="hat.png" width="244" height="150"/>
         <image name="monkey_1.png" width="140" height="168"/>
         <image name="monkey_2.png" width="140" height="168"/>
         <image name="pineapple.png" width="121" height="267"/>
@@ -492,6 +498,10 @@
         </class>
         <class className="PinchGestureVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PinchGestureVC.h"/>
+            <relationships>
+                <relationship kind="action" name="handlePinch:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="outlet" name="scaleLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="RotationGestureVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RotationGestureVC.h"/>
