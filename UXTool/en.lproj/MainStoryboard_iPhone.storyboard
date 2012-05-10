@@ -266,7 +266,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location in super view?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="b6w-YT-LS2">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Location in super view?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="b6w-YT-LS2">
                                 <rect key="frame" x="20" y="50" width="280" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -310,9 +310,12 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="gq0-0z-ngA" appends="YES" id="f05-JZ-oLL"/>
+                                    <outletCollection property="gestureRecognizers" destination="6Gb-a4-aEa" appends="YES" id="CPY-vi-h3R"/>
+                                    <outletCollection property="gestureRecognizers" destination="vVs-X3-7DV" appends="YES" id="K2C-AF-fPa"/>
+                                    <outletCollection property="gestureRecognizers" destination="CQH-NC-R8h" appends="YES" id="fFC-7c-IiJ"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Velocity of Swipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IO7-el-U5D">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Velocity of Swipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IO7-el-U5D">
                                 <rect key="frame" x="20" y="20" width="280" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -320,7 +323,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Size of Swipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="a2j-65-EEF">
-                                <rect key="frame" x="20" y="50" width="280" height="22"/>
+                                <rect key="frame" x="20" y="20" width="280" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -330,8 +333,32 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Swipe" id="RAB-9F-ZoJ"/>
+                    <connections>
+                        <outlet property="monkeyImageView" destination="tob-bc-8sj" id="Ybi-bf-lP6"/>
+                        <outlet property="sizeLabel" destination="a2j-65-EEF" id="2bA-hS-v7V"/>
+                        <outlet property="velocityLabel" destination="IO7-el-U5D" id="7o7-DM-kUq"/>
+                    </connections>
                 </viewController>
-                <swipeGestureRecognizer direction="right" id="gq0-0z-ngA"/>
+                <swipeGestureRecognizer direction="up" id="gq0-0z-ngA">
+                    <connections>
+                        <action selector="handleSwipeUp:" destination="2aU-dT-G5V" id="Ccf-3r-7jk"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="6Gb-a4-aEa">
+                    <connections>
+                        <action selector="handleSwipeRight:" destination="2aU-dT-G5V" id="ZMq-yH-sgf"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="vVs-X3-7DV">
+                    <connections>
+                        <action selector="handleSwipeLeft:" destination="2aU-dT-G5V" id="o7v-K0-jq8"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="CQH-NC-R8h">
+                    <connections>
+                        <action selector="handleSwipeDown:" destination="2aU-dT-G5V" id="Sdo-nc-hnq"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1035" y="618"/>
         </scene>
@@ -530,6 +557,15 @@
         </class>
         <class className="SwipeGestureVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SwipeGestureVC.h"/>
+            <relationships>
+                <relationship kind="action" name="handleSwipeDown:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="handleSwipeLeft:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="handleSwipeRight:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="handleSwipeUp:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="outlet" name="monkeyImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="sizeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="velocityLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="TapGestureVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TapGestureVC.h"/>

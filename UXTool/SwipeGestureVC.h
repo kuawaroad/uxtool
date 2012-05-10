@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface SwipeGestureVC : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *velocityLabel;
+@property (strong, nonatomic) IBOutlet UILabel *sizeLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *monkeyImageView;
+- (IBAction)handleSwipeUp:(UISwipeGestureRecognizer *)sender;
+- (IBAction)handleSwipeRight:(UISwipeGestureRecognizer *)sender;
+- (IBAction)handleSwipeLeft:(UISwipeGestureRecognizer *)sender;
+- (IBAction)handleSwipeDown:(UISwipeGestureRecognizer *)sender;
 
 @end

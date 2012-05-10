@@ -47,6 +47,6 @@
 - (IBAction)handleTap:(UITapGestureRecognizer *)sender 
 {
     CGPoint touchPoint = [sender locationInView:self.view];
-    self.touchesAndTaps.text = [NSString stringWithFormat:@"Touches: %i  Location:(%.f , %.f)",sender.numberOfTouches,touchPoint.x,touchPoint.y];
+    self.touchesAndTaps.text = [NSString stringWithFormat:@"%ixTaps: %i  Location:(%.f , %.f)",sender.numberOfTapsRequired, sender.numberOfTouches,touchPoint.x,touchPoint.y];
 }
 @end
