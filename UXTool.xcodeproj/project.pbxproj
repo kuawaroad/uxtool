@@ -32,6 +32,11 @@
 		B4D54A41155C6D5100F99FBE /* pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A3A155C6D5100F99FBE /* pineapple.png */; };
 		B4D54A42155C6D5100F99FBE /* statue.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A3B155C6D5100F99FBE /* statue.png */; };
 		B4D54A45155C6D9D00F99FBE /* monkey_3.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D54A44155C6D9D00F99FBE /* monkey_3.png */; };
+		B4D54A48155C714200F99FBE /* PinchGestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D54A47155C714200F99FBE /* PinchGestureVC.m */; };
+		B4D54A4B155C71BA00F99FBE /* TapGestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D54A4A155C71BA00F99FBE /* TapGestureVC.m */; };
+		B4D54A4E155C71D500F99FBE /* RotationGestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D54A4D155C71D500F99FBE /* RotationGestureVC.m */; };
+		B4D54A51155C71E400F99FBE /* SwipeGestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D54A50155C71E400F99FBE /* SwipeGestureVC.m */; };
+		B4D54A54155C71F800F99FBE /* LongPressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D54A53155C71F800F99FBE /* LongPressVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +73,16 @@
 		B4D54A3A155C6D5100F99FBE /* pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pineapple.png; sourceTree = "<group>"; };
 		B4D54A3B155C6D5100F99FBE /* statue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statue.png; sourceTree = "<group>"; };
 		B4D54A44155C6D9D00F99FBE /* monkey_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey_3.png; sourceTree = "<group>"; };
+		B4D54A46155C714200F99FBE /* PinchGestureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinchGestureVC.h; sourceTree = "<group>"; };
+		B4D54A47155C714200F99FBE /* PinchGestureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinchGestureVC.m; sourceTree = "<group>"; };
+		B4D54A49155C71BA00F99FBE /* TapGestureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapGestureVC.h; path = ../TapGestureVC.h; sourceTree = "<group>"; };
+		B4D54A4A155C71BA00F99FBE /* TapGestureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TapGestureVC.m; path = ../TapGestureVC.m; sourceTree = "<group>"; };
+		B4D54A4C155C71D500F99FBE /* RotationGestureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationGestureVC.h; sourceTree = "<group>"; };
+		B4D54A4D155C71D500F99FBE /* RotationGestureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationGestureVC.m; sourceTree = "<group>"; };
+		B4D54A4F155C71E400F99FBE /* SwipeGestureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeGestureVC.h; sourceTree = "<group>"; };
+		B4D54A50155C71E400F99FBE /* SwipeGestureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeGestureVC.m; sourceTree = "<group>"; };
+		B4D54A52155C71F800F99FBE /* LongPressVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongPressVC.h; sourceTree = "<group>"; };
+		B4D54A53155C71F800F99FBE /* LongPressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongPressVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +164,16 @@
 				B4560DB8155AEAC9004E9F49 /* AccelerometerVC.m */,
 				B4D54A2C155C666B00F99FBE /* PanGestureVC.h */,
 				B4D54A2D155C666B00F99FBE /* PanGestureVC.m */,
+				B4D54A46155C714200F99FBE /* PinchGestureVC.h */,
+				B4D54A47155C714200F99FBE /* PinchGestureVC.m */,
+				B4D54A49155C71BA00F99FBE /* TapGestureVC.h */,
+				B4D54A4A155C71BA00F99FBE /* TapGestureVC.m */,
+				B4D54A4C155C71D500F99FBE /* RotationGestureVC.h */,
+				B4D54A4D155C71D500F99FBE /* RotationGestureVC.m */,
+				B4D54A4F155C71E400F99FBE /* SwipeGestureVC.h */,
+				B4D54A50155C71E400F99FBE /* SwipeGestureVC.m */,
+				B4D54A52155C71F800F99FBE /* LongPressVC.h */,
+				B4D54A53155C71F800F99FBE /* LongPressVC.m */,
 			);
 			name = "Detail View Controllers";
 			sourceTree = "<group>";
@@ -253,6 +278,11 @@
 				B4560DAE155ADA2F004E9F49 /* DetailViewController.m in Sources */,
 				B4560DB9155AEAC9004E9F49 /* AccelerometerVC.m in Sources */,
 				B4D54A2E155C666B00F99FBE /* PanGestureVC.m in Sources */,
+				B4D54A48155C714200F99FBE /* PinchGestureVC.m in Sources */,
+				B4D54A4B155C71BA00F99FBE /* TapGestureVC.m in Sources */,
+				B4D54A4E155C71D500F99FBE /* RotationGestureVC.m in Sources */,
+				B4D54A51155C71E400F99FBE /* SwipeGestureVC.m in Sources */,
+				B4D54A54155C71F800F99FBE /* LongPressVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

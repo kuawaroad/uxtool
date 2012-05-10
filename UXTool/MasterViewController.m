@@ -8,7 +8,8 @@
 
 #import "MasterViewController.h"
 
-#import "DetailViewController.h"
+    //#import "DetailViewController.h"
+#import "PinchGestureVC.h"
 
 @interface MasterViewController () 
 {
@@ -40,7 +41,7 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
-        self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+        self.detailViewController = (PinchGestureVC *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     NSDictionary *plistDict = [NSDictionary dictionaryWithContentsOfFile:[self pathForFile:@"Data" ofType:@"plist"]];
     _objects = [plistDict objectForKey:@"Root"];
@@ -147,8 +148,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSDate *object = [_objects objectAtIndex:indexPath.row];
-        self.detailViewController.detailItem = object;
+            //NSDate *object = [_objects objectAtIndex:indexPath.row];
+            //self.detailViewController.detailItem = object;
     } else {
             // iPhone...
         if (indexPath.row == 0) {
@@ -177,11 +178,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    /*
     if ([[segue identifier] isEqualToString:@"PinchSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSDictionary *object = [_objects objectAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
+    */
 }
 
 -(NSString *)pathForFile:(NSString *)plistFile ofType:(NSString *)fileType
