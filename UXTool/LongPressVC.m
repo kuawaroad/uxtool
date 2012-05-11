@@ -13,6 +13,13 @@
 @end
 
 @implementation LongPressVC
+@synthesize lastGestureLabel;
+@synthesize durationLabel;
+@synthesize oneByOneGR;
+@synthesize oneByFiveGR;
+@synthesize twoByOneGR;
+@synthesize twoByFiveGR;
+@synthesize fiveByFiveGR;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,10 +34,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+        // Gesture Recognizer Dependencies...
+    
+    
 }
 
 - (void)viewDidUnload
 {
+    [self setLastGestureLabel:nil];
+    [self setDurationLabel:nil];
+    [self setOneByOneGR:nil];
+    [self setOneByFiveGR:nil];
+    [self setTwoByOneGR:nil];
+    [self setTwoByFiveGR:nil];
+    [self setFiveByFiveGR:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -38,6 +56,27 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+- (IBAction)handleLongPressSingleOneSec:(UILongPressGestureRecognizer *)sender {
+    self.lastGestureLabel.text = @"One Touch, One Second";
+}
+
+- (IBAction)handleLongPressSingleFiveSec:(UILongPressGestureRecognizer *)sender {
+    self.lastGestureLabel.text = @"One Touch, Five Seconds";
+}
+
+- (IBAction)handleLongPressDoubleOneSec:(UILongPressGestureRecognizer *)sender {
+    self.lastGestureLabel.text = @"Two Touches, One Second";
+}
+
+- (IBAction)handleLongPressDoubleFiveSec:(UILongPressGestureRecognizer *)sender {
+    self.lastGestureLabel.text = @"Two Touches, Five Seconds";
+}
+
+- (IBAction)handleLongPressFiveForFive:(UILongPressGestureRecognizer *)sender {
+    self.lastGestureLabel.text = @"Five Touches, Five Seconds";
 }
 
 @end
