@@ -36,12 +36,25 @@
 	// Do any additional setup after loading the view.
     
         // Gesture Recognizer Dependencies...
+    self.oneByOneGR.cancelsTouchesInView = NO;
+    self.oneByOneGR.delaysTouchesEnded = NO;
     
-    
+    [self.oneByFiveGR requireGestureRecognizerToFail:oneByOneGR];
+}
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    self.durationLabel.text = @"shouldRecognizeSimultaneous";
+    return YES;
 }
 
 - (void)viewDidUnload
 {
+    NSLog(@"View Did Unload");
+    [self.oneByOneGR setDelegate:nil];
+    [self.oneByFiveGR setDelegate:nil];
+    [self.twoByOneGR setDelegate:nil];
+    [self.twoByFiveGR setDelegate:nil];
+    [self.fiveByFiveGR setDelegate:nil];
     [self setLastGestureLabel:nil];
     [self setDurationLabel:nil];
     [self setOneByOneGR:nil];

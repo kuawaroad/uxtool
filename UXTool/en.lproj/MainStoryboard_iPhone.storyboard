@@ -212,7 +212,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" image="backpack.png" id="QD3-4q-aEb">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" image="backpack.png" id="QD3-4q-aEb">
                                 <rect key="frame" x="71" y="102" width="179" height="212"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -250,29 +250,34 @@
                         <outlet property="twoByOneGR" destination="na2-lK-hZs" id="F6m-2x-eqi"/>
                     </connections>
                 </viewController>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" id="Z2A-pk-9bM">
+                <pongPressGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" allowableMovement="10" minimumPressDuration="1" id="Z2A-pk-9bM">
                     <connections>
                         <action selector="handleLongPressSingleOneSec:" destination="dRN-6F-HQB" id="KeW-w8-lbR"/>
+                        <outlet property="delegate" destination="dRN-6F-HQB" id="kQx-do-1rG"/>
                     </connections>
                 </pongPressGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="5" id="ZB9-Gy-oup">
                     <connections>
                         <action selector="handleLongPressSingleFiveSec:" destination="dRN-6F-HQB" id="l58-tu-dWp"/>
+                        <outlet property="delegate" destination="dRN-6F-HQB" id="177-kq-s3g"/>
                     </connections>
                 </pongPressGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" numberOfTouchesRequired="2" id="na2-lK-hZs">
                     <connections>
                         <action selector="handleLongPressDoubleOneSec:" destination="dRN-6F-HQB" id="CZY-8n-qgW"/>
+                        <outlet property="delegate" destination="dRN-6F-HQB" id="zQn-cP-F5T"/>
                     </connections>
                 </pongPressGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="5" numberOfTouchesRequired="2" id="yfd-8B-fT9">
                     <connections>
                         <action selector="handleLongPressDoubleFiveSec:" destination="dRN-6F-HQB" id="rr7-eR-8e8"/>
+                        <outlet property="delegate" destination="dRN-6F-HQB" id="gru-0H-jak"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="5" numberOfTouchesRequired="5" id="tgh-Av-u4Q">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="5" numberOfTouchesRequired="3" id="tgh-Av-u4Q">
                     <connections>
                         <action selector="handleLongPressFiveForFive:" destination="dRN-6F-HQB" id="rx8-MV-RWP"/>
+                        <outlet property="delegate" destination="dRN-6F-HQB" id="Bal-2V-WJP"/>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
